@@ -19,6 +19,8 @@ class InitialViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var locationTextView: UITextView!
     @IBOutlet weak var refreshButton: UIButton!
     
+    var locations: [CLLocation]?
+    
     lazy var autocompleteController: AutocompleteViewController = {
         let controller = AutocompleteViewController()
         
@@ -168,7 +170,11 @@ class InitialViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("locations are \(locations)")
-        self.weatherViewSetup()
+        guard self.locations != nil else {
+            self.locations = locations
+            self.weatherViewSetup()
+            return
+        }
     }
     
     
