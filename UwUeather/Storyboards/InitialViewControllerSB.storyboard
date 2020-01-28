@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jE1-Ry-BpQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="urf-dU-ThL">
+            <objects>
+                <viewController id="jE1-Ry-BpQ" customClass="InitialViewController" customModule="UwUeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ic8-bA-u0I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ipsumfield, VA" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vu8-PP-Xvj">
+                                <rect key="frame" x="87" y="125" width="240" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5fv-3W-HKY"/>
+                                    <constraint firstAttribute="width" constant="240" id="W3b-Xt-x0a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNK-sl-uBC">
+                                <rect key="frame" x="137" y="167" width="140" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sNK-sl-uBC" secondAttribute="height" multiplier="1:1" id="M8h-7Y-5r5"/>
+                                    <constraint firstAttribute="height" constant="140" id="yFm-Jb-hBA"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Rain ._." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S67-mf-CGS">
+                                <rect key="frame" x="87" y="315" width="240" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cH5-wd-aNc"/>
+                                    <constraint firstAttribute="width" constant="240" id="tDM-Xg-w1g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-Go-7YK">
+                                <rect key="frame" x="149.5" y="377" width="115" height="30"/>
+                                <state key="normal" title="Refresh Weather"/>
+                                <connections>
+                                    <action selector="refreshWeatherPressed:" destination="jE1-Ry-BpQ" eventType="touchUpInside" id="JWz-9c-Ihx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-9N-L66">
+                                <rect key="frame" x="364" y="811" width="30" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addLocationPressed:" destination="jE1-Ry-BpQ" eventType="touchUpInside" id="Y1A-Bv-pxS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sNK-sl-uBC" firstAttribute="top" secondItem="vu8-PP-Xvj" secondAttribute="bottom" constant="8" id="103-vK-Ldo"/>
+                            <constraint firstItem="oNU-8M-A5W" firstAttribute="bottom" secondItem="ciS-9N-L66" secondAttribute="bottom" id="67B-tJ-T5E"/>
+                            <constraint firstItem="vu8-PP-Xvj" firstAttribute="centerX" secondItem="oNU-8M-A5W" secondAttribute="centerX" id="Igb-kH-vVn"/>
+                            <constraint firstItem="mzW-Go-7YK" firstAttribute="centerX" secondItem="oNU-8M-A5W" secondAttribute="centerX" id="Tnl-Zf-nUK"/>
+                            <constraint firstItem="vu8-PP-Xvj" firstAttribute="top" secondItem="oNU-8M-A5W" secondAttribute="top" constant="81" id="Vmp-6d-A9I"/>
+                            <constraint firstItem="S67-mf-CGS" firstAttribute="centerX" secondItem="oNU-8M-A5W" secondAttribute="centerX" id="XIe-4o-KR3"/>
+                            <constraint firstItem="S67-mf-CGS" firstAttribute="top" secondItem="sNK-sl-uBC" secondAttribute="bottom" constant="8" id="cf0-ph-Os9"/>
+                            <constraint firstItem="sNK-sl-uBC" firstAttribute="centerX" secondItem="oNU-8M-A5W" secondAttribute="centerX" id="dvG-LF-MIT"/>
+                            <constraint firstItem="mzW-Go-7YK" firstAttribute="top" secondItem="S67-mf-CGS" secondAttribute="bottom" constant="28" id="hhk-bI-ZGN"/>
+                            <constraint firstItem="oNU-8M-A5W" firstAttribute="trailing" secondItem="ciS-9N-L66" secondAttribute="trailing" constant="20" id="nWS-5S-jou"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oNU-8M-A5W"/>
+                    </view>
+                    <connections>
+                        <outlet property="forecastTextView" destination="S67-mf-CGS" id="tmr-kM-11X"/>
+                        <outlet property="locationTextView" destination="vu8-PP-Xvj" id="ROo-WJ-n3r"/>
+                        <outlet property="refreshButton" destination="mzW-Go-7YK" id="Bjv-oU-3uT"/>
+                        <outlet property="weatherImageView" destination="sNK-sl-uBC" id="KXo-kG-eVt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9CF-9g-ep8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </scene>
+    </scenes>
+</document>

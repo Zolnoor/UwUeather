@@ -8,6 +8,9 @@
 
 import UIKit
 
+//GooglePlaces is the SDK that allows me to do autocomplete location searching
+import GooglePlaces
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Setting GooglePlaces API key
+        GMSPlacesClient.provideAPIKey(Secrets.placesApiKey)
         // Override point for customization after application launch.
         return true
     }
